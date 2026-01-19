@@ -1,0 +1,63 @@
+<html>
+<head>
+<title> URBAN-MALABAR-CONFIRMATION </title>
+<link rel="icon" type="image/x-icon" href="Urban Malabar.png">
+<style>
+body {
+    background-color: #BEB6A3;
+    text-align: center;
+    margin: 0;
+}
+audio {
+    display: none; 
+}
+.corner {
+    position: fixed; 
+    width: 100px;
+    height: 100px;
+    z-index: 1000;
+}
+
+.top-left { top: 0; left: 0; }
+.top-right { top: 0; right: 0; }
+.bottom-left { bottom: 0; left: 0; }
+.bottom-right { bottom: 0; right: 0; }
+</style>
+</head>
+<body>
+
+<img src="Icon.png" class="corner bottom-left" alt="Bottom Left Design">
+<img src="Icon.png" class="corner bottom-right" alt="Bottom Right Design">
+<img src="People.png" width="150px" height="90px" alt="South Indian People">
+<img src="Peeps.png" width="100px" height="90px" alt="South Indian People">
+<img src="temple.jpg" width="100px" height="90px" alt="South Indian People">
+<img src="Urban Malabar.png" width="90px" height="90px" alt="Logo of Restaurant" style="margin:auto;">
+<img src="temple.jpg" width="100px" height="90px" alt="South Indian People">
+<img src="Peeps.png" width="100px" height="90px" alt="South Indian People">
+<img src="People.png" width="160px" height="90px" alt="South Indian People">
+
+<h1 style="font-size:70px; color:maroon;"><u><em> URBAN MALABAR </em></u></h1>
+
+
+<audio id="bg-music" loop>
+  <source src="Music.mp3" type="audio/mpeg">
+</audio>
+
+<script language="JavaScript">
+const audio = document.getElementById("bg-music");
+audio.volume = 1.0; 
+audio.play().catch(() => {
+    document.addEventListener("click", () => { audio.play(); }, { once: true });
+    document.addEventListener("touchstart", () => { audio.play(); }, { once: true });
+});
+</script> 
+
+<img src="FAMILY.jpg" width="100px" height="100px" alt="Family Icon" style="display:block; margin:auto;">
+
+<h2 style="font-family: Verdana; color: maroon; text-align: center;">
+    !!Vanakkam!!
+<h2 style="text-align:center; color:maroon; font-size:30px;">
+Thank you for registeration!!
+Your reservation is confirmed!! </h2>
+</body>
+</html>

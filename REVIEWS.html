@@ -1,0 +1,122 @@
+<html>
+<head>
+<title> URBAN MALABAR-REVIEWS</title>
+<link rel="icon" type="image/x-icon" href="Urban Malabar.png">
+<style>
+body {
+    background-color: #BEB6A3;
+    text-align: center;
+    margin: 0;
+}
+audio {
+    display: none;
+}
+.corner {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    z-index: 1000;
+}
+
+.top-left { top: 0; left: 0; }
+.top-right { top: 0; right: 0; }
+.bottom-left { bottom: 0; left: 0; }
+.bottom-right { bottom: 0; right: 0; }
+.review-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+}
+.review-card {
+  width: 350px;
+  background: #fff8f2;
+  border-radius: 15px;
+  padding: 18px;
+  margin: 20px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+  font-family: "Georgia", serif;
+  display: flex;
+  align-items: center;
+}
+
+.review-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.review-details h3 {
+  margin: 0;
+  color: #8b0000;
+}
+
+.review-details .stars {
+  color: gold;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.review-details p {
+  margin: 0;
+  color: #4a352e;
+  font-size: 14px;
+}
+
+</style>
+</head>
+<body>
+<img src="Icon.png" class="corner bottom-left" alt="Bottom Left Design">
+<img src="Icon.png" class="corner bottom-right" alt="Bottom Right Design">
+<img src="People.png" width="150px" height="90px" alt="South Indian People">
+<img src="Peeps.png" width="100px" height="90px" alt="South Indian People">
+<img src="temple.jpg" width="100px" height="90px" alt="South Indian People">
+<img src="Urban Malabar.png" width="90px" height="90px" alt="Logo of Restaurant" style="margin:auto;">
+<img src="temple.jpg" width="100px" height="90px" alt="South Indian People">
+<img src="Peeps.png" width="100px" height="90px" alt="South Indian People">
+<img src="People.png" width="160px" height="90px" alt="South Indian People">
+
+<h1 style="font-size:70px; color:maroon;"><u><em> URBAN MALABAR </em></u></h1>
+
+
+<audio id="bg-music" loop>
+  <source src="Music.mp3" type="audio/mpeg">
+</audio>
+
+<script language="JavaScript">
+const audio = document.getElementById("bg-music");
+audio.volume = 1.0; 
+audio.play().catch(() => {
+    document.addEventListener("click", () => { audio.play(); }, { once: true });
+    document.addEventListener("touchstart", () => { audio.play(); }, { once: true });
+});
+</script> 
+<img src="FAMILY.jpg" width="100px" height="100px" alt="Family Icon" style="display:block; margin:auto;">
+
+<h2 style="font-family: Verdana; color: maroon; text-align: center;">
+    !!Vanakkam!!
+</h2>
+<div class="review-section">
+
+  <div class="review-card">
+    <img src="https://via.placeholder.com/70" alt="Alex">
+    <h3>Alex Livingstone</h3>
+    <div class="stars">★★★★★</div>
+    <p>The flavours felt authentic and comforting. Every dish carried a warm, rich aroma.</p>
+  </div>
+
+  <div class="review-card">
+    <img src="https://via.placeholder.com/70" alt="Nancy">
+    <h3>Nancy Bird</h3>
+    <div class="stars">★★★★☆</div>
+    <p>Beautifully presented dishes with a lovely Kerala touch. The Filter Coffee was the highlight!</p>
+  </div>
+
+</div>
+<form>
+<button type="submit"><a href="Project Web Page.html">HOME</a></button>
+</form>
+
+</body>
+</html>

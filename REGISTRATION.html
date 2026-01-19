@@ -1,0 +1,207 @@
+<html>
+<head>
+<title> URBAN MALABAR-REGISTRATION</title>
+<link rel="icon" type="image/x-icon" href="Urban Malabar.png">
+<style>
+.center-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.continue-btn {
+  background: #7e0202;
+  color: white;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Georgia', serif;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.continue-btn:hover {
+  background: #a00404;
+  
+}
+
+body {
+    background-color: #BEB6A3;
+    text-align: center;
+    margin: 0;
+}
+audio {
+    display: none; 
+}
+.corner {
+    position: fixed; 
+    width: 100px;
+    height: 100px;
+    z-index: 1000;
+}
+
+.top-left { top: 0; left: 0; }
+.top-right { top: 0; right: 0; }
+.bottom-left { bottom: 0; left: 0; }
+.bottom-right { bottom: 0; right: 0; }
+.form-box {
+      width: 350px;
+      background: white;
+      padding: 20px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gray;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: maroon;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #a00000;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+    .signup-text {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .signup-text a {
+      color: maroon;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .signup-text a:hover {
+      text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+<img src="Icon.png" class="corner bottom-left" alt="Bottom Left Design">
+<img src="Icon.png" class="corner bottom-right" alt="Bottom Right Design">
+<img src="People.png" width="150px" height="90px" alt="South Indian People">
+<img src="Peeps.png" width="100px" height="90px" alt="South Indian People">
+<img src="temple.jpg" width="100px" height="90px" alt="South Indian People">
+<img src="Urban Malabar.png" width="90px" height="90px" alt="Logo of Restaurant" style="margin:auto;">
+<img src="temple.jpg" width="100px" height="90px" alt="South Indian People">
+<img src="Peeps.png" width="100px" height="90px" alt="South Indian People">
+<img src="People.png" width="160px" height="90px" alt="South Indian People">
+
+<h1 style="font-size:70px; color:maroon;"><u><em> URBAN MALABAR </em></u></h1>
+
+<audio id="bg-music" loop>
+  <source src="Music.mp3" type="audio/mpeg">
+</audio>
+
+<script language="JavaScript">
+const audio = document.getElementById("bg-music");
+audio.volume = 1.0; 
+audio.play().catch(() => {
+    document.addEventListener("click", () => { audio.play(); }, { once: true });
+    document.addEventListener("touchstart", () => { audio.play(); }, { once: true });
+});
+</script> 
+
+<img src="FAMILY.jpg" width="100px" height="100px" alt="Family Icon" style="display:block; margin:auto;">
+
+<h2 style="font-family: Verdana; color: maroon; text-align: center;">
+    !!Vanakkam!!
+</h2>
+<br>
+<h2 style="font-size:30px; color:white;"><mark style="background-color:darkred; color: white;"> ONLINE RESERVATION SYSTEM </mark></h2>
+<h3 style="font-family: Giaza; color: maroon; text-align: center; font-size:25px	;">
+    <mark style="background-color: lightblue; color: maroon;">
+       SIGN UP to register for your Reservation!!<br>
+<br>
+<br>
+    </mark>
+<div class="form-box">
+    <h2 style="text-align:center; color:maroon;">RESERVATION</h2>
+
+    <form onsubmit="return validateForm()">
+
+      <label>Name:</label>
+      <input type="text" id="name">
+      <p id="nameError" class="error"></p>
+
+      <label>Email:</label>
+      <input type="text" id="email">
+      <p id="emailError" class="error"></p>
+
+      <label>Date:</label>
+      <input type="date" id="date">
+      <p id="dateError" class="error"></p>
+
+      <label>Number of Persons:</label>
+      <input type="number" id="persons" min="1">
+      <p id="personsError" class="error"></p>
+<div class="center-btn">
+  <a href="Load.html" class="continue-btn">CONTINUE</a>
+</div>
+
+      <button type="submit"><a href="Project Web Page.html">HOME</a></button>
+
+    </form>
+<p class="signup-text">
+      Don't have an account?
+      <a href="signup.html" target="_blank">Sign up</a>
+    </p>
+
+  </div>
+
+  <script language="JavaScript">
+    function validateForm() {
+      let valid = true;
+
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let date = document.getElementById("date").value;
+      let persons = document.getElementById("persons").value;
+
+      document.getElementById("nameError").innerHTML = "";
+      document.getElementById("emailError").innerHTML = "";
+      document.getElementById("dateError").innerHTML = "";
+      document.getElementById("personsError").innerHTML = "";
+
+      if (name.trim() === "") {
+        document.getElementById("nameError").innerHTML = "Name is required";
+        valid = false;
+      }
+
+      let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.match(emailPattern)) {
+        document.getElementById("emailError").innerHTML = "Enter a valid email";
+        valid = false;
+      }
+
+      if (date === "") {
+        document.getElementById("dateError").innerHTML = "Please select a date";
+        valid = false;
+      }
+
+      if (persons < 1) {
+        document.getElementById("personsError").innerHTML = "Enter at least 1 person";
+        valid = false;
+      }
+
+      return valid;
+    }
+  </script>
+
+</html>

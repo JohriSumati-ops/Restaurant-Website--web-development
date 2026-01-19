@@ -1,0 +1,205 @@
+<html>
+<head>
+<title> URBAN-MALABAR-SIGNUP </title>
+<link rel="icon" type="image/x-icon" href="Urban Malabar.png">
+<style>
+body {
+    background-color: #BEB6A3;
+    text-align: center;
+    margin: 0;
+}
+audio {
+    display: none; 
+}
+.corner {
+    position: fixed; 
+    width: 100px;
+    height: 100px;
+    z-index: 1000;
+}
+
+.top-left { top: 0; left: 0; }
+.top-right { top: 0; right: 0; }
+.bottom-left { bottom: 0; left: 0; }
+.bottom-right { bottom: 0; right: 0; }
+.form-box {
+      width: 350px;
+      background: powderblue;
+      padding: 20px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gray;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: maroon;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #a00000;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+a:visited{
+color:white;
+}
+label {
+    font-weight: bold;
+    color: maroon;
+  }
+
+  input {
+    padding: 6px;
+    border: 2px solid #999;
+    border-radius: 5px;
+    background-color: #fff7f7; 
+  }
+
+  input.error-border {
+    border-color: red;
+    background-color: #ffe5e5; 
+  }
+
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+  }
+.center-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.continue-btn {
+  background: #7e0202;
+  color: white;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Georgia', serif;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.continue-btn:hover {
+  background: #a00404;
+  transform: scale(1.05);
+}
+</style>
+<body>
+<img src="Icon.png" class="corner bottom-left" alt="Bottom Left Design">
+<img src="Icon.png" class="corner bottom-right" alt="Bottom Right Design">
+
+<img src="People.png" width="150px" height="90px" alt="South Indian People">
+<img src="Peeps.png" width="100px" height="90px" alt="South Indian People">
+<img src="temple.jpg" width="100px" height="90px" alt="South Indian People">
+<img src="Urban Malabar.png" width="90px" height="90px" alt="Logo of Restaurant" style="margin:auto;">
+<img src="temple.jpg" width="100px" height="90px" alt="South Indian People">
+<img src="Peeps.png" width="100px" height="90px" alt="South Indian People">
+<img src="People.png" width="160px" height="90px" alt="South Indian People">
+
+<h1 style="font-size:70px; color:maroon;"><u><em> URBAN MALABAR </em></u></h1>
+
+
+<audio id="bg-music" loop>
+  <source src="Music.mp3" type="audio/mpeg">
+</audio>
+
+<script language="JavaScript">
+const audio = document.getElementById("bg-music");
+audio.volume = 1.0; 
+audio.play().catch(() => {
+    document.addEventListener("click", () => { audio.play(); }, { once: true });
+    document.addEventListener("touchstart", () => { audio.play(); }, { once: true });
+});
+</script> 
+
+<img src="FAMILY.jpg" width="100px" height="100px" alt="Family Icon" style="display:block; margin:auto;">
+
+<h2 style="font-family: Verdana; color: maroon; text-align: center;">
+    !!Vanakkam!!
+</h2>
+<div class="form-box">
+    <h2 style="text-align:center; color:maroon; font-size:30px;">LOG IN </h2><h3><em>
+~MALABAR FAMILY!</em></h3>
+
+    <form onsubmit="return validateForm()">
+
+  <label>First Name:</label>
+  <input type="text" id="fname">
+  <br><br>
+
+  <label>Last Name:</label>
+  <input type="text" id="lname">
+  <p id="nameError" class="error"></p>
+
+  <label>Mobile Number:</label>
+  <input type="number" id="mobile">
+  <p id="mobileError" class="error"></p>
+
+  <label>Email:</label>
+  <input type="text" id="email">
+  <p id="emailError" class="error"></p>
+<div class="center-btn">
+  <a href="REGISTRATION.html" class="continue-btn">CONTINUE</a>
+</div>
+
+<button type="submit"><a href="Project Web Page.html">HOME</a></button>
+</form>
+<script>
+function validateForm() {
+    document.getElementById("nameError").innerHTML = "";
+    document.getElementById("mobileError").innerHTML = "";
+    document.getElementById("emailError").innerHTML = "";
+
+    let fname = document.getElementById("fname").value.trim();
+    let lname = document.getElementById("lname").value.trim();
+    let mobile = document.getElementById("mobile").value.trim();
+    let email = document.getElementById("email").value.trim();
+
+    let valid = true;
+
+    if (fname === "" || lname === "") {
+        document.getElementById("nameError").innerHTML = "Please enter both first and last name.";
+        valid = false;
+    }
+
+    if (mobile === "" || mobile.length !== 10) {
+        document.getElementById("mobileError").innerHTML = "Enter a valid 10-digit mobile number.";
+        valid = false;
+    }
+
+   
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        document.getElementById("emailError").innerHTML = "Enter a valid email address.";
+        valid = false;
+    }
+
+    return valid; 
+</script>
+</body>
+</html>
+
+	
+
+
+

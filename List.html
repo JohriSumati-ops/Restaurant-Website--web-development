@@ -1,0 +1,105 @@
+<html>
+<head>
+    <title>ToDo List</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f8f8f8;
+        }
+        .header {
+            background: #2dad4b;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            font-size: 30px;
+        }
+        .box {
+            max-width: 700px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        input {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        li {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btns button {
+            margin-left: 5px;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+        .edit {
+            background: #22c55e;
+            color: white;
+        }
+        .del {
+            background: #ef4444;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">ToDo List</div>
+
+<div class="box">
+    <input id="taskInput">
+    <button onclick="addTask()">Submit</button>
+
+    <ul id="taskList"></ul>
+</div>
+
+<script>
+    function addTask() {
+        let t = document.getElementById("taskInput")
+        let v = t.value.trim()
+        if (v == "") return
+        let li = document.createElement("li")
+        let text = document.createElement("span")
+        text.innerText = v
+        let box = document.createElement("div")
+        box.className = "btns"
+        let e = document.createElement("button")
+        e.className = "edit"
+        e.innerText = "Edit"
+        e.onclick = function() {
+            let n = prompt("Edit task", text.innerText)
+            if (n) text.innerText = n
+        }
+        let d = document.createElement("button")
+        d.className = "del"
+        d.innerText = "Delete"
+        d.onclick = function() {
+            li.remove()
+        }
+        box.appendChild(e)
+        box.appendChild(d)
+        li.appendChild(text)
+        li.appendChild(box)
+        document.getElementById("taskList").appendChild(li)
+        t.value = ""
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>Urban Malabar</title>
+<link rel="icon" type="image/x-icon" href="Urban Malabar.png">
+<style>
+body {
+    background-color: #BEB6A3;
+    text-align: center;
+    margin: 0;
+}
+h1 {
+    font-family: Sunshine;
+    font-size: 40px;
+    color: maroon;
+    text-align: center;
+}
+audio {
+    display: none; 
+}
+.icon {
+    width: 90px;
+    height: 90px;
+    border: 3px solid #ffcc00;
+    border-radius: 12px;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+
+.corner {
+    position: fixed; 
+    width: 100px;
+    height: 100px;
+    z-index: 1000;
+}
+
+.top-left { top: 0; left: 0; }
+.top-right { top: 0; right: 0; }
+.bottom-left { bottom: 0; left: 0; }
+.bottom-right { bottom: 0; right: 0; }
+
+table {
+    text-align: center;
+margin-left: auto;
+    margin-right: auto; 
+}
+th, td {
+    text-align: center;  
+    padding: 10px;      
+}
+th {
+      border: 3px solid maroon; 
+      background-color: tomato; 
+      padding: 10px;
+    }
+
+    td {
+      border: 2px solid teal; 
+      padding: 8px;
+ a:visited {
+      color: white; 
+    }
+    a:link {
+      color: blue; 
+    }
+     }</style>
+</head>
+<body>
+
+
+<img src="Icon.png" class="corner bottom-left" alt="Bottom Left Design">
+<img src="Icon.png" class="corner bottom-right" alt="Bottom Right Design">
+
+
+<img src="People.png" width="150px" height="90px" alt="South Indian People">
+<img src="Peeps.png" width="100px" height="90px" alt="South Indian People">
+<img src="temple.jpg" width="100px" height="90px" alt="South Indian People">
+<img src="Urban Malabar.png" width="90px" height="90px" alt="Logo of Restaurant" style="margin:auto;">
+<img src="temple.jpg" width="100px" height="90px" alt="South Indian People">
+<img src="Peeps.png" width="100px" height="90px" alt="South Indian People">
+<img src="People.png" width="160px" height="90px" alt="South Indian People">
+
+<h1><u><em> URBAN MALABAR </em></u></h1>
+
+<audio id="bg-music" loop>
+ <source src="Music.mp3" type="audio/mpeg">
+</audio>
+
+<script language="JavaScript">
+const audio = document.getElementById("bg-music");
+audio.volume = 1.0;
+audio.play().catch(() => {
+    document.addEventListener("click", () => { audio.play(); }, { once: true });
+    document.addEventListener("touchstart", () => { audio.play(); }, { once: true });
+});
+</script> 
+
+<img src="FAMILY.jpg" width="100px" height="100px" alt="Family Icon" style="display:block; margin:auto;">
+
+<h2 style="font-family: Verdana; color: maroon; text-align: center;">
+    !!Vanakkam!!
+</h2>
+
+<h3 style="font-family: Giaza; color: maroon; text-align: center;">
+    <mark style="background-color: lightblue; color: maroon;">
+        Dive deep into an exquisite <br>
+        blend of spices and taste<br>
+        in the canopy of urban flavour,<br>
+        at your very own<br>
+        authentic Malabar!!
+<br>
+<br>
+<br>
+Dive deeper into our CATALOGUE!!
+    </mark>
+</h3>
+<br>
+<table style="border: 3px solid maroon; color:white;" >
+<border style="maroon">
+	<tr>
+<th> <a href="REGISTRATION.html" target="_blank">REGISTRATION </a></th>
+<th> <a href="MENU.html" target="_blank">MENU </a></th>
+<th> <a href="REVIEWS.html" target="_blank">REVIEWS </a></th>
+</tr>
+
+</body>
+</html>
