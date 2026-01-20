@@ -1,6 +1,48 @@
-# Restaurant-Website--web-development
-A web project that incorporates the essence of a restaurant called Urban Malabar that promises to deliver authentic south Indian food. It asserts to keep the subtlety of the southern culture, traditions in the roots of its households, food and fragrance, is this website embroided with my skills in HTML, CSS and JavaScript
+# 🍽️ Restaurant Website 🌐
 
+A responsive and visually appealing **restaurant website** designed to showcase the restaurant’s menu, services, and contact details.  
+This project focuses on **front-end web development**, emphasizing clean UI, usability, and modern design principles.
+
+---
+
+## 🌐 Website Overview
+The website provides a smooth user experience with structured sections for:
+- Home  
+- About  
+- Menu  
+- Services  
+- Contact  
+
+It is designed to be fully responsive across devices.
+
+---
+
+## 🛠️ Tech Stack
+- HTML5  
+- CSS3  
+- JavaScript  
+- Bootstrap (if used)
+
+---
+
+## 🎨 Features
+- Responsive design for desktop and mobile  
+- Interactive navigation bar  
+- Menu display section  
+- Contact form layout  
+- Clean and modern UI
+
+---
+
+## ▶️ How to Run the Project
+1. Clone the repository  
+2. Open the project folder  
+3. Run the website by opening `index.html` in a browser  
+
+---
+
+## 📷 Website Preview
+Below are screenshots of the website layout and sections:
 
 <img width="1918" height="1016" alt="image" src="https://github.com/user-attachments/assets/46a28f95-b9b8-41ee-bc1f-421b488acb6e" />
 <img width="1901" height="895" alt="image" src="https://github.com/user-attachments/assets/61fe3f3c-ff85-4f4d-b80e-1d37e3cd441f" />
@@ -13,4 +55,16 @@ A web project that incorporates the essence of a restaurant called Urban Malabar
 <img width="1918" height="918" alt="image" src="https://github.com/user-attachments/assets/6ea24a0d-183f-41da-9113-2bfebb99679a" />
 <img width="1917" height="917" alt="image" src="https://github.com/user-attachments/assets/b5289e0d-df88-413d-9b03-82d86339046b" />
 
+
+---
+
+## 🚀 Future Improvements
+- Add backend support for contact form  
+- Integrate online table reservation system  
+- Improve animations and transitions  
+- Optimize performance and accessibility
+
+
+
 <img width="523" height="525" alt="Urban Malabar" src="https://github.com/user-attachments/assets/2f772a74-6612-406b-919f-52e4f4dc0866" />
+
